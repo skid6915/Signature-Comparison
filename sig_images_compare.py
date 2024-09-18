@@ -47,7 +47,7 @@ def compare_images(image1, image2, model, transform):
 st.set_page_config(page_title="Signature Comparison App", layout="centered", initial_sidebar_state="expanded")
 
 # App Title
-st.title("🖋️ Signature Comparison Web App")
+st.title("🖋️ Signcheck AI Web App")
 st.write("Upload two signature images to compare them and get a similarity score.")
 
 # Image file uploaders
