@@ -117,9 +117,16 @@ st.markdown("🔒 **Privacy Notice:** Your signature images are processed secure
 
 # Add a beautiful sidebar
 st.sidebar.title("About This App")
+# st.sidebar.write("""
+# This app uses a deep learning model, Siamese Network to compare two signature images. 
+# It calculates the cosine similarity between the two signature embeddings and provides a similarity score.
+# If the score is equals or above a certain threshold (0.98), the signatures are considered similar.
+# You can use this app for signature verification cutting across business lines.
+# """)
+
 st.sidebar.write("""
-This app uses a deep learning model, Siamese Network to compare two signature images. 
-It calculates the cosine similarity between the two signature embeddings and provides a similarity score.
+This app uses a deep learning model to compare two signature images. 
+It calculates the similarity between the two signature embeddings and provides a similarity score.
 If the score is equals or above a certain threshold (0.98), the signatures are considered similar.
 You can use this app for signature verification cutting across business lines.
 """)
