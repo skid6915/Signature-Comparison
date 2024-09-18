@@ -88,6 +88,9 @@ if image1_file and image2_file:
         else:
             st.error("The signatures are different.")
 
+st.markdown("---")
+st.markdown("**Note:** No signature data is stored or saved. All images are immediately discareded after processing")
+
 # Add a beautiful sidebar
 st.sidebar.title("About This App")
 st.sidebar.write("""
