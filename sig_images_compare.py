@@ -93,7 +93,7 @@ st.sidebar.title("About This App")
 st.sidebar.write("""
 This app uses a Siamese Network powered by ResNet to compare two signature images. 
 It calculates the cosine similarity between the two signature embeddings and provides a similarity score.
-If the score is above a certain threshold (0.96), the signatures are considered similar.
+If the score is equals or above a certain threshold (0.96), the signatures are considered similar.
 You can use this app for signature verification cutting across business lines.
 """)
 
