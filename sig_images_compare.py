@@ -81,35 +81,35 @@ if image1_file and image2_file:
     image1 = Image.open(image1_file).convert("RGB")
     image2 = Image.open(image2_file).convert("RGB")
 
-    # validate both images are likely to be signatures
-    if not is_signature_image(image1):
-        st.error("The first image does not appear to be a signature. Please upload a valid signature")
+    # # validate both images are likely to be signatures
+    # if not is_signature_image(image1):
+    #     st.error("The first image does not appear to be a signature. Please upload a valid signature")
     
-    elif not is_signature_image(image2):
-        st.error("The second image does not appear to be a signature. Please upload a valid signature")
+    # elif not is_signature_image(image2):
+    #     st.error("The second image does not appear to be a signature. Please upload a valid signature")
     
-    else:
-
-    
-        # Display images
-        st.subheader("Uploaded Signatures:")
-        col1, col2 = st.columns(2)
-        col1.image(image1, caption="Signature 1", use_column_width=True)
-        col2.image(image2, caption="Signature 2", use_column_width=True)
+    # else:
         
-        # Compare signatures on button click
-        if st.button("Compare Signatures"):
-            with st.spinner("Comparing signatures..."):
-                similarity_score = compare_images(image1, image2, model, transform)
-            
-            # Display similarity score
-            result_placeholder.subheader(f"Similarity Score: {similarity_score:.2f}")
-            
-            # Interpret similarity
-            if similarity_score > 0.98:
-                st.success("The signatures are similar.")
-            else:
-                st.error("The signatures are different.")
+    
+    # Display images
+    st.subheader("Uploaded Signatures:")
+    col1, col2 = st.columns(2)
+    col1.image(image1, caption="Signature 1", use_column_width=True)
+    col2.image(image2, caption="Signature 2", use_column_width=True)
+    
+    # Compare signatures on button click
+    if st.button("Compare Signatures"):
+        with st.spinner("Comparing signatures..."):
+            similarity_score = compare_images(image1, image2, model, transform)
+        
+        # Display similarity score
+        result_placeholder.subheader(f"Similarity Score: {similarity_score:.2f}")
+        
+        # Interpret similarity
+        if similarity_score > 0.98:
+            st.success("The signatures are similar.")
+        else:
+            st.error("The signatures are different.")
 
 st.markdown("---")
 st.markdown("🔒 **Privacy Notice:** Your signature images are processed securely and are **NOT** stored in any form. All images are handled in real-time and discarded immediately after processing.")
