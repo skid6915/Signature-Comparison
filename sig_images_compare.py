@@ -60,7 +60,7 @@ def is_signature_image(image):
 st.set_page_config(page_title="Signature Comparison App", layout="centered", initial_sidebar_state="expanded")
 
 # App Title
-st.title("🖋️ Signcheck AI Powered App")
+st.title("🖋️ Signcheck Powered By AI/ML")
 st.write("Upload two signature images to compare them and get a similarity score.")
 
 # Image file uploaders
