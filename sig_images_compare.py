@@ -89,12 +89,13 @@ if image1_file and image2_file:
             st.error("The signatures are different.")
 
 st.markdown("---")
-st.markdown("**Note:** No signature data is stored or saved. All images are immediately discareded after processing")
+st.markdown("🔒 **Privacy Notice:** Your signature images are processed securely and are **NOT** stored in any form. All images are handled in real-time and discarded immediately after processing.")
+
 
 # Add a beautiful sidebar
 st.sidebar.title("About This App")
 st.sidebar.write("""
-This app uses a Siamese Network powered by ResNet to compare two signature images. 
+This app uses a deep learning model, Siamese Network to compare two signature images. 
 It calculates the cosine similarity between the two signature embeddings and provides a similarity score.
 If the score is equals or above a certain threshold (0.98), the signatures are considered similar.
 You can use this app for signature verification cutting across business lines.
